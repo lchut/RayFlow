@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\FlowSource\code\FlowLab\RayFlow\ext\glog\src\mock-log_unittest.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\FlowSource\code\FlowLab\RayFlow\ext\glog\src\mock-log.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{987F5D53-A9FA-3E91-8CEA-EE7CB15869D0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{29C8B3DE-1E37-3960-82DF-108E5110EECB}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

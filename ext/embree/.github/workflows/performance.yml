@@ -1,0 +1,139 @@
+## Copyright 2022 Intel Corporation
+## SPDX-License-Identifier: Apache-2.0
+
+name: performance
+
+on: [workflow_dispatch]
+
+jobs:
+
+
+  ########################################
+  # Linux build
+  ########################################
+
+  linux-build-DG2-DPCPP:
+    secrets: inherit
+    uses: intel-innersource/libraries.devops.renderkit.workflows/.github/workflows/embree_docker.yml@main
+    with:
+      image: embree/ubuntu:20.04
+      options: --device=/dev/dri:/dev/dri
+      runs-on: '[ "Linux", "docker", "dg2" ]'
+      artifact-out: linux-DG2-DPCPP
+      artifact-path: ./build/*.tar.gz .ctest_conf
+      cmd: |
+        scripts/test.py configure platform:x64 build:Release compiler:ICX2023.0.0 EMBREE_SYCL_SUPPORT:ON sycl:none gfx:RELEASE ispc:ispc1.18.1 isas:SSE2-SSE42-AVX-AVX2-AVX512 tasking:TBB2021.7.0 intensity:4 package:ZIP
+        scripts/test.py build
+        scripts/test.py test
+
+
+  linux-build-x86-ICX-ISPC:
+    secrets: inherit
+    uses: intel-innersource/libraries.devops.renderkit.workflows/.github/workflows/embree_docker.yml@main
+    with:
+      image: embree/rockylinux:8.7
+      runs-on: '[ "Linux", "docker", "avx512" ]'
+      artifact-out: linux-build-x86-ICX-ISPC
+      artifact-path: ./build/*.tar.gz .ctest_conf
+      cmd: |
+        scripts/test.py configure platform:x64 build:Release compiler:ICX2023.0.0 ispc:ispc1.18.1 isas:SSE2-SSE42-AVX-AVX2-AVX512 tasking:TBB2021.7.0 intensity:4 package:ZIP
+        scripts/test.py build
+        scripts/test.py test
+
+
+
+  linux-test-DG2-A750-not_perf:
+    secrets: inherit
+    uses: intel-innersource/libraries.devops.renderkit.workflows/.github/workflows/embree_docker.yml@main
+    needs: ["linux-build-DG2-DPCPP"]
+    with:
+      image: embree/ubuntu:22.04
+      options: --device=/dev/dri:/dev/dri
+      runs-on: '[ "Linux", "docker", "dg2" ]'
+      artifact-in: linux-DG2-DPCPP
+      cmd: |
+        source <(scripts/test.py env --debug)
+        cd build
+        tar -xf embree-4.0.0.sycl.x86_64.linux.tar.gz
+        cd embree-4.0.0.sycl.x86_64.linux
+        chmod +x embree-vars.sh
+        ./embree-vars.sh
+        cd bin
+        $GITHUB_WORKSPACE/scripts/run-perf.sh gpu
+
+  linux-test-DG2-A770:
+    secrets: inherit
+    uses: intel-innersource/libraries.devops.renderkit.workflows/.github/workflows/embree_docker.yml@main
+    needs: ["linux-build-DG2-DPCPP"]
+    with:
+      image: embree/ubuntu:22.04
+      options: --device=/dev/dri:/dev/dri
+      runs-on: '[ "Linux", "docker", "A770", "perf" ]'
+      artifact-in: linux-DG2-DPCPP
+      cmd: |
+        source <(scripts/test.py env --debug)
+        cd build
+        tar -xf embree-4.0.0.sycl.x86_64.linux.tar.gz
+        cd embree-4.0.0.sycl.x86_64.linux
+        chmod +x embree-vars.sh
+        ./embree-vars.sh
+        cd bin
+        $GITHUB_WORKSPACE/scripts/run-perf.sh gpu
+
+
+  linux-test-i9-12900k:
+    secrets: inherit
+    uses: intel-innersource/libraries.devops.renderkit.workflows/.github/workflows/perf.yml@main
+    needs: ["linux-build-x86-ICX-ISPC"]
+    with:
+      runs-on: '[ "Linux", "perf", "vis-perf-i9-12900k-1" ]'
+      artifact-in: linux-build-x86-ICX-ISPC
+      cmd: |
+        cd build
+        tar -xf embree-4.0.0.x86_64.linux.tar.gz
+        cd embree-4.0.0.x86_64.linux
+        cd bin
+        $GITHUB_WORKSPACE/scripts/run-perf.sh cpu
+
+  linux-test-x8380-1:
+    secrets: inherit
+    uses: intel-innersource/libraries.devops.renderkit.workflows/.github/workflows/perf.yml@main
+    needs: ["linux-build-x86-ICX-ISPC"]
+    with:
+      runs-on: '[ "Linux", "perf", "vis-perf-x8380-1" ]'
+      artifact-in: linux-build-x86-ICX-ISPC
+      cmd: |
+        cd build
+        tar -xf embree-4.0.0.x86_64.linux.tar.gz
+        cd embree-4.0.0.x86_64.linux
+        cd bin
+        $GITHUB_WORKSPACE/scripts/run-perf.sh cpu
+
+  linux-test-x8280-1:
+    secrets: inherit
+    uses: intel-innersource/libraries.devops.renderkit.workflows/.github/workflows/perf.yml@main
+    needs: ["linux-build-x86-ICX-ISPC"]
+    with:
+      runs-on: '[ "Linux", "perf", "vis-perf-x8280-1" ]'
+      artifact-in: linux-build-x86-ICX-ISPC
+      cmd: |
+        cd build
+        tar -xf embree-4.0.0.x86_64.linux.tar.gz
+        cd embree-4.0.0.x86_64.linux
+        cd bin
+        $GITHUB_WORKSPACE/scripts/run-perf.sh cpu
+
+  linux-test-a3970x-1:
+    secrets: inherit
+    uses: intel-innersource/libraries.devops.renderkit.workflows/.github/workflows/perf.yml@main
+    needs: ["linux-build-x86-ICX-ISPC"]
+    with:
+      runs-on: '[ "Linux", "perf", "vis-perf-a3970x-1" ]'
+      artifact-in: linux-build-x86-ICX-ISPC
+      cmd: |
+        cd build
+        tar -xf embree-4.0.0.x86_64.linux.tar.gz
+        cd embree-4.0.0.x86_64.linux
+        cd bin
+        $GITHUB_WORKSPACE/scripts/run-perf.sh cpu
+

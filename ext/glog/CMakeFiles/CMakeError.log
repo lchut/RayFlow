@@ -1,0 +1,789 @@
+Performing C++ SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: C:/FlowSource/code/FlowLab/RayFlow/ext/glog/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_4e12d.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && 用于 .NET Framework 的 Microsoft (R) 生成引擎版本 16.11.2+f32259642
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+  用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.29.30147 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  src.cxx
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D "CMAKE_INTDIR=\"Debug\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_4e12d.dir\Debug\\" /Fd"cmTC_4e12d.dir\Debug\vc142.pdb" /external:W1 /Gd /TP /errorReport:queue C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\src.cxx
+C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\src.cxx(1,10): fatal error C1083: 无法打开包括文件: “pthread.h”: No such file or directory [C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\cmTC_4e12d.vcxproj]
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: C:/FlowSource/code/FlowLab/RayFlow/ext/glog/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_9d951.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && 用于 .NET Framework 的 Microsoft (R) 生成引擎版本 16.11.2+f32259642
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+  用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.29.30147 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  CheckFunctionExists.cxx
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\"Debug\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_9d951.dir\Debug\\" /Fd"cmTC_9d951.dir\Debug\vc142.pdb" /external:W1 /Gd /TP /errorReport:queue C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CheckLibraryExists\CheckFunctionExists.cxx
+LINK : fatal error LNK1104: 无法打开文件“pthreads.lib” [C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\cmTC_9d951.vcxproj]
+
+
+
+Determining if the function pthread_create exists in the pthread failed with the following output:
+Change Dir: C:/FlowSource/code/FlowLab/RayFlow/ext/glog/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_5bfb6.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && 用于 .NET Framework 的 Microsoft (R) 生成引擎版本 16.11.2+f32259642
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+  用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.29.30147 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  CheckFunctionExists.cxx
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\"Debug\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_5bfb6.dir\Debug\\" /Fd"cmTC_5bfb6.dir\Debug\vc142.pdb" /external:W1 /Gd /TP /errorReport:queue C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CheckLibraryExists\CheckFunctionExists.cxx
+LINK : fatal error LNK1104: 无法打开文件“pthread.lib” [C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\cmTC_5bfb6.vcxproj]
+
+
+
+Determining if the include file unwind.h exists failed with the following output:
+Change Dir: C:/FlowSource/code/FlowLab/RayFlow/ext/glog/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_cca31.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && 用于 .NET Framework 的 Microsoft (R) 生成引擎版本 16.11.2+f32259642
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+  用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.29.30147 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  CheckIncludeFile.cxx
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_cca31.dir\Debug\\" /Fd"cmTC_cca31.dir\Debug\vc142.pdb" /external:W1 /Gd /TP /errorReport:queue C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\CheckIncludeFile.cxx
+C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\CheckIncludeFile.cxx(1,10): fatal error C1083: 无法打开包括文件: “unwind.h”: No such file or directory [C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\cmTC_cca31.vcxproj]
+
+
+
+Determining if the _Unwind_Backtrace exist failed with the following output:
+Change Dir: C:/FlowSource/code/FlowLab/RayFlow/ext/glog/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_6d58e.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && 用于 .NET Framework 的 Microsoft (R) 生成引擎版本 16.11.2+f32259642
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+  用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.29.30147 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  CheckSymbolExists.cxx
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_6d58e.dir\Debug\\" /Fd"cmTC_6d58e.dir\Debug\vc142.pdb" /external:W1 /Gd /TP /errorReport:queue C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\CheckSymbolExists.cxx
+C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\CheckSymbolExists.cxx(2,10): fatal error C1083: 无法打开包括文件: “unwind.h”: No such file or directory [C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\cmTC_6d58e.vcxproj]
+
+
+File C:/FlowSource/code/FlowLab/RayFlow/ext/glog/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <unwind.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef _Unwind_Backtrace
+  return ((int*)(&_Unwind_Backtrace))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the include file dlfcn.h exists failed with the following output:
+Change Dir: C:/FlowSource/code/FlowLab/RayFlow/ext/glog/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_2d11a.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && 用于 .NET Framework 的 Microsoft (R) 生成引擎版本 16.11.2+f32259642
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+  用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.29.30147 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  CheckIncludeFile.cxx
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_2d11a.dir\Debug\\" /Fd"cmTC_2d11a.dir\Debug\vc142.pdb" /external:W1 /Gd /TP /errorReport:queue C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\CheckIncludeFile.cxx
+C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\CheckIncludeFile.cxx(1,10): fatal error C1083: 无法打开包括文件: “dlfcn.h”: No such file or directory [C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\cmTC_2d11a.vcxproj]
+
+
+
+Determining if the include file execinfo.h exists failed with the following output:
+Change Dir: C:/FlowSource/code/FlowLab/RayFlow/ext/glog/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_ef799.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && 用于 .NET Framework 的 Microsoft (R) 生成引擎版本 16.11.2+f32259642
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+  用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.29.30147 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  CheckIncludeFile.cxx
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_ef799.dir\Debug\\" /Fd"cmTC_ef799.dir\Debug\vc142.pdb" /external:W1 /Gd /TP /errorReport:queue C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\CheckIncludeFile.cxx
+C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\CheckIncludeFile.cxx(1,10): fatal error C1083: 无法打开包括文件: “execinfo.h”: No such file or directory [C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\cmTC_ef799.vcxproj]
+
+
+
+Determining if the include file glob.h exists failed with the following output:
+Change Dir: C:/FlowSource/code/FlowLab/RayFlow/ext/glog/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_dd804.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && 用于 .NET Framework 的 Microsoft (R) 生成引擎版本 16.11.2+f32259642
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+  用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.29.30147 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  CheckIncludeFile.cxx
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_dd804.dir\Debug\\" /Fd"cmTC_dd804.dir\Debug\vc142.pdb" /external:W1 /Gd /TP /errorReport:queue C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\CheckIncludeFile.cxx
+C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\CheckIncludeFile.cxx(1,10): fatal error C1083: 无法打开包括文件: “glob.h”: No such file or directory [C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\cmTC_dd804.vcxproj]
+
+
+
+Determining if the include file pwd.h exists failed with the following output:
+Change Dir: C:/FlowSource/code/FlowLab/RayFlow/ext/glog/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_5244f.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && 用于 .NET Framework 的 Microsoft (R) 生成引擎版本 16.11.2+f32259642
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+  用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.29.30147 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  CheckIncludeFile.cxx
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_5244f.dir\Debug\\" /Fd"cmTC_5244f.dir\Debug\vc142.pdb" /external:W1 /Gd /TP /errorReport:queue C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\CheckIncludeFile.cxx
+C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\CheckIncludeFile.cxx(1,10): fatal error C1083: 无法打开包括文件: “pwd.h”: No such file or directory [C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\cmTC_5244f.vcxproj]
+
+
+
+Determining if the include file strings.h exists failed with the following output:
+Change Dir: C:/FlowSource/code/FlowLab/RayFlow/ext/glog/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_bd974.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && 用于 .NET Framework 的 Microsoft (R) 生成引擎版本 16.11.2+f32259642
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+  用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.29.30147 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  CheckIncludeFile.cxx
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_bd974.dir\Debug\\" /Fd"cmTC_bd974.dir\Debug\vc142.pdb" /external:W1 /Gd /TP /errorReport:queue C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\CheckIncludeFile.cxx
+C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\CheckIncludeFile.cxx(1,10): fatal error C1083: 无法打开包括文件: “strings.h”: No such file or directory [C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\cmTC_bd974.vcxproj]
+
+
+
+Determining if the include file sys/syscall.h exists failed with the following output:
+Change Dir: C:/FlowSource/code/FlowLab/RayFlow/ext/glog/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_1df7e.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && 用于 .NET Framework 的 Microsoft (R) 生成引擎版本 16.11.2+f32259642
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+  用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.29.30147 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  CheckIncludeFile.cxx
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_1df7e.dir\Debug\\" /Fd"cmTC_1df7e.dir\Debug\vc142.pdb" /external:W1 /Gd /TP /errorReport:queue C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\CheckIncludeFile.cxx
+C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\CheckIncludeFile.cxx(1,10): fatal error C1083: 无法打开包括文件: “sys/syscall.h”: No such file or directory [C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\cmTC_1df7e.vcxproj]
+
+
+
+Determining if the include file sys/time.h exists failed with the following output:
+Change Dir: C:/FlowSource/code/FlowLab/RayFlow/ext/glog/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_6fd5a.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && 用于 .NET Framework 的 Microsoft (R) 生成引擎版本 16.11.2+f32259642
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+  用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.29.30147 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  CheckIncludeFile.cxx
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_6fd5a.dir\Debug\\" /Fd"cmTC_6fd5a.dir\Debug\vc142.pdb" /external:W1 /Gd /TP /errorReport:queue C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\CheckIncludeFile.cxx
+C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\CheckIncludeFile.cxx(1,10): fatal error C1083: 无法打开包括文件: “sys/time.h”: No such file or directory [C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\cmTC_6fd5a.vcxproj]
+
+
+
+Determining if the include file sys/utsname.h exists failed with the following output:
+Change Dir: C:/FlowSource/code/FlowLab/RayFlow/ext/glog/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_94246.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && 用于 .NET Framework 的 Microsoft (R) 生成引擎版本 16.11.2+f32259642
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+  用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.29.30147 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  CheckIncludeFile.cxx
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_94246.dir\Debug\\" /Fd"cmTC_94246.dir\Debug\vc142.pdb" /external:W1 /Gd /TP /errorReport:queue C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\CheckIncludeFile.cxx
+C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\CheckIncludeFile.cxx(1,10): fatal error C1083: 无法打开包括文件: “sys/utsname.h”: No such file or directory [C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\cmTC_94246.vcxproj]
+
+
+
+Determining if the include file sys/wait.h exists failed with the following output:
+Change Dir: C:/FlowSource/code/FlowLab/RayFlow/ext/glog/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_ec7de.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && 用于 .NET Framework 的 Microsoft (R) 生成引擎版本 16.11.2+f32259642
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+  用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.29.30147 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  CheckIncludeFile.cxx
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_ec7de.dir\Debug\\" /Fd"cmTC_ec7de.dir\Debug\vc142.pdb" /external:W1 /Gd /TP /errorReport:queue C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\CheckIncludeFile.cxx
+C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\CheckIncludeFile.cxx(1,10): fatal error C1083: 无法打开包括文件: “sys/wait.h”: No such file or directory [C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\cmTC_ec7de.vcxproj]
+
+
+
+Determining if the include file syscall.h exists failed with the following output:
+Change Dir: C:/FlowSource/code/FlowLab/RayFlow/ext/glog/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_5bd68.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && 用于 .NET Framework 的 Microsoft (R) 生成引擎版本 16.11.2+f32259642
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+  用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.29.30147 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  CheckIncludeFile.cxx
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_5bd68.dir\Debug\\" /Fd"cmTC_5bd68.dir\Debug\vc142.pdb" /external:W1 /Gd /TP /errorReport:queue C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\CheckIncludeFile.cxx
+C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\CheckIncludeFile.cxx(1,10): fatal error C1083: 无法打开包括文件: “syscall.h”: No such file or directory [C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\cmTC_5bd68.vcxproj]
+
+
+
+Determining if the include file syslog.h exists failed with the following output:
+Change Dir: C:/FlowSource/code/FlowLab/RayFlow/ext/glog/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_9d8af.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && 用于 .NET Framework 的 Microsoft (R) 生成引擎版本 16.11.2+f32259642
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+  用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.29.30147 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  CheckIncludeFile.cxx
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_9d8af.dir\Debug\\" /Fd"cmTC_9d8af.dir\Debug\vc142.pdb" /external:W1 /Gd /TP /errorReport:queue C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\CheckIncludeFile.cxx
+C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\CheckIncludeFile.cxx(1,10): fatal error C1083: 无法打开包括文件: “syslog.h”: No such file or directory [C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\cmTC_9d8af.vcxproj]
+
+
+
+Determining if the include file ucontext.h exists failed with the following output:
+Change Dir: C:/FlowSource/code/FlowLab/RayFlow/ext/glog/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_505e7.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && 用于 .NET Framework 的 Microsoft (R) 生成引擎版本 16.11.2+f32259642
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+  用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.29.30147 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  CheckIncludeFile.cxx
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_505e7.dir\Debug\\" /Fd"cmTC_505e7.dir\Debug\vc142.pdb" /external:W1 /Gd /TP /errorReport:queue C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\CheckIncludeFile.cxx
+C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\CheckIncludeFile.cxx(1,10): fatal error C1083: 无法打开包括文件: “ucontext.h”: No such file or directory [C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\cmTC_505e7.vcxproj]
+
+
+
+Determining if the include file unistd.h exists failed with the following output:
+Change Dir: C:/FlowSource/code/FlowLab/RayFlow/ext/glog/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_932f7.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && 用于 .NET Framework 的 Microsoft (R) 生成引擎版本 16.11.2+f32259642
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+  用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.29.30147 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  CheckIncludeFile.cxx
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_932f7.dir\Debug\\" /Fd"cmTC_932f7.dir\Debug\vc142.pdb" /external:W1 /Gd /TP /errorReport:queue C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\CheckIncludeFile.cxx
+C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\CheckIncludeFile.cxx(1,10): fatal error C1083: 无法打开包括文件: “unistd.h”: No such file or directory [C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\cmTC_932f7.vcxproj]
+
+
+
+Determining if the include file ext/hash_map exists failed with the following output:
+Change Dir: C:/FlowSource/code/FlowLab/RayFlow/ext/glog/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_bb1cd.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && 用于 .NET Framework 的 Microsoft (R) 生成引擎版本 16.11.2+f32259642
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+  用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.29.30147 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  CheckIncludeFile.cxx
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_bb1cd.dir\Debug\\" /Fd"cmTC_bb1cd.dir\Debug\vc142.pdb" /external:W1 /Gd /TP /errorReport:queue C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\CheckIncludeFile.cxx
+C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\CheckIncludeFile.cxx(1,10): fatal error C1083: 无法打开包括文件: “ext/hash_map”: No such file or directory [C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\cmTC_bb1cd.vcxproj]
+
+
+
+Determining if the include file ext/hash_set exists failed with the following output:
+Change Dir: C:/FlowSource/code/FlowLab/RayFlow/ext/glog/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_39487.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && 用于 .NET Framework 的 Microsoft (R) 生成引擎版本 16.11.2+f32259642
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+  用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.29.30147 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  CheckIncludeFile.cxx
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_39487.dir\Debug\\" /Fd"cmTC_39487.dir\Debug\vc142.pdb" /external:W1 /Gd /TP /errorReport:queue C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\CheckIncludeFile.cxx
+C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\CheckIncludeFile.cxx(1,10): fatal error C1083: 无法打开包括文件: “ext/hash_set”: No such file or directory [C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\cmTC_39487.vcxproj]
+
+
+
+Determining if the include file ext/slist exists failed with the following output:
+Change Dir: C:/FlowSource/code/FlowLab/RayFlow/ext/glog/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_dc48d.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && 用于 .NET Framework 的 Microsoft (R) 生成引擎版本 16.11.2+f32259642
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+  用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.29.30147 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  CheckIncludeFile.cxx
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_dc48d.dir\Debug\\" /Fd"cmTC_dc48d.dir\Debug\vc142.pdb" /external:W1 /Gd /TP /errorReport:queue C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\CheckIncludeFile.cxx
+C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\CheckIncludeFile.cxx(1,10): fatal error C1083: 无法打开包括文件: “ext/slist”: No such file or directory [C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\cmTC_dc48d.vcxproj]
+
+
+
+Determining if the include file tr1/unordered_map exists failed with the following output:
+Change Dir: C:/FlowSource/code/FlowLab/RayFlow/ext/glog/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_69c25.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && 用于 .NET Framework 的 Microsoft (R) 生成引擎版本 16.11.2+f32259642
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+  用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.29.30147 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  CheckIncludeFile.cxx
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_69c25.dir\Debug\\" /Fd"cmTC_69c25.dir\Debug\vc142.pdb" /external:W1 /Gd /TP /errorReport:queue C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\CheckIncludeFile.cxx
+C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\CheckIncludeFile.cxx(1,10): fatal error C1083: 无法打开包括文件: “tr1/unordered_map”: No such file or directory [C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\cmTC_69c25.vcxproj]
+
+
+
+Determining if the include file tr1/unordered_set exists failed with the following output:
+Change Dir: C:/FlowSource/code/FlowLab/RayFlow/ext/glog/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_00657.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && 用于 .NET Framework 的 Microsoft (R) 生成引擎版本 16.11.2+f32259642
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+  用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.29.30147 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  CheckIncludeFile.cxx
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_00657.dir\Debug\\" /Fd"cmTC_00657.dir\Debug\vc142.pdb" /external:W1 /Gd /TP /errorReport:queue C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\CheckIncludeFile.cxx
+C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\CheckIncludeFile.cxx(1,10): fatal error C1083: 无法打开包括文件: “tr1/unordered_set”: No such file or directory [C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\cmTC_00657.vcxproj]
+
+
+
+Determining size of u_int16_t failed with the following output:
+Change Dir: C:/FlowSource/code/FlowLab/RayFlow/ext/glog/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_aacaf.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && 用于 .NET Framework 的 Microsoft (R) 生成引擎版本 16.11.2+f32259642
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+  用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.29.30147 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  HAVE_U_INT16_T.cpp
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_aacaf.dir\Debug\\" /Fd"cmTC_aacaf.dir\Debug\vc142.pdb" /external:W1 /Gd /TP /errorReport:queue C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CheckTypeSize\HAVE_U_INT16_T.cpp
+C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CheckTypeSize\HAVE_U_INT16_T.cpp(29,12): error C2065: “u_int16_t”: 未声明的标识符 [C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\cmTC_aacaf.vcxproj]
+C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CheckTypeSize\HAVE_U_INT16_T.cpp(30,12): error C2065: “u_int16_t”: 未声明的标识符 [C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\cmTC_aacaf.vcxproj]
+C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CheckTypeSize\HAVE_U_INT16_T.cpp(31,12): error C2065: “u_int16_t”: 未声明的标识符 [C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\cmTC_aacaf.vcxproj]
+C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CheckTypeSize\HAVE_U_INT16_T.cpp(32,12): error C2065: “u_int16_t”: 未声明的标识符 [C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\cmTC_aacaf.vcxproj]
+C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CheckTypeSize\HAVE_U_INT16_T.cpp(33,12): error C2065: “u_int16_t”: 未声明的标识符 [C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\cmTC_aacaf.vcxproj]
+
+
+C:/FlowSource/code/FlowLab/RayFlow/ext/glog/CMakeFiles/CheckTypeSize/HAVE_U_INT16_T.cpp:
+#include <sys/types.h>
+#include <stdint.h>
+#include <stddef.h>
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__PPC64__)
+# define KEY '_','_','P','P','C','6','4','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#elif defined(__PPC__)
+# define KEY '_','_','P','P','C','_','_'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__aarch64__)
+# define KEY '_','_','a','a','r','c','h','6','4','_','_'
+#elif defined(__ARM_ARCH_7A__)
+# define KEY '_','_','A','R','M','_','A','R','C','H','_','7','A','_','_'
+#elif defined(__ARM_ARCH_7S__)
+# define KEY '_','_','A','R','M','_','A','R','C','H','_','7','S','_','_'
+#endif
+
+#define SIZE (sizeof(u_int16_t))
+static char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining if the function dladdr exists failed with the following output:
+Change Dir: C:/FlowSource/code/FlowLab/RayFlow/ext/glog/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_776cf.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && 用于 .NET Framework 的 Microsoft (R) 生成引擎版本 16.11.2+f32259642
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+  用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.29.30147 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  CheckFunctionExists.cxx
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=dladdr /D "CMAKE_INTDIR=\"Debug\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_776cf.dir\Debug\\" /Fd"cmTC_776cf.dir\Debug\vc142.pdb" /external:W1 /Gd /TP /errorReport:queue C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CheckFunctionExists\CheckFunctionExists.cxx
+CheckFunctionExists.obj : error LNK2019: 无法解析的外部符号 dladdr，函数 main 中引用了该符号 [C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\cmTC_776cf.vcxproj]
+C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\Debug\cmTC_776cf.exe : fatal error LNK1120: 1 个无法解析的外部命令 [C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\cmTC_776cf.vcxproj]
+
+
+
+Determining if the function fcntl exists failed with the following output:
+Change Dir: C:/FlowSource/code/FlowLab/RayFlow/ext/glog/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_f03da.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && 用于 .NET Framework 的 Microsoft (R) 生成引擎版本 16.11.2+f32259642
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+  用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.29.30147 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  CheckFunctionExists.cxx
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=fcntl /D "CMAKE_INTDIR=\"Debug\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_f03da.dir\Debug\\" /Fd"cmTC_f03da.dir\Debug\vc142.pdb" /external:W1 /Gd /TP /errorReport:queue C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CheckFunctionExists\CheckFunctionExists.cxx
+CheckFunctionExists.obj : error LNK2019: 无法解析的外部符号 fcntl，函数 main 中引用了该符号 [C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\cmTC_f03da.vcxproj]
+C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\Debug\cmTC_f03da.exe : fatal error LNK1120: 1 个无法解析的外部命令 [C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\cmTC_f03da.vcxproj]
+
+
+
+Determining if the function pread exists failed with the following output:
+Change Dir: C:/FlowSource/code/FlowLab/RayFlow/ext/glog/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_fee98.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && 用于 .NET Framework 的 Microsoft (R) 生成引擎版本 16.11.2+f32259642
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+  用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.29.30147 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  CheckFunctionExists.cxx
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pread /D "CMAKE_INTDIR=\"Debug\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_fee98.dir\Debug\\" /Fd"cmTC_fee98.dir\Debug\vc142.pdb" /external:W1 /Gd /TP /errorReport:queue C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CheckFunctionExists\CheckFunctionExists.cxx
+CheckFunctionExists.obj : error LNK2019: 无法解析的外部符号 pread，函数 main 中引用了该符号 [C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\cmTC_fee98.vcxproj]
+C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\Debug\cmTC_fee98.exe : fatal error LNK1120: 1 个无法解析的外部命令 [C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\cmTC_fee98.vcxproj]
+
+
+
+Determining if the function pwrite exists failed with the following output:
+Change Dir: C:/FlowSource/code/FlowLab/RayFlow/ext/glog/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_a5ab0.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && 用于 .NET Framework 的 Microsoft (R) 生成引擎版本 16.11.2+f32259642
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+  用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.29.30147 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  CheckFunctionExists.cxx
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pwrite /D "CMAKE_INTDIR=\"Debug\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_a5ab0.dir\Debug\\" /Fd"cmTC_a5ab0.dir\Debug\vc142.pdb" /external:W1 /Gd /TP /errorReport:queue C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CheckFunctionExists\CheckFunctionExists.cxx
+CheckFunctionExists.obj : error LNK2019: 无法解析的外部符号 pwrite，函数 main 中引用了该符号 [C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\cmTC_a5ab0.vcxproj]
+C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\Debug\cmTC_a5ab0.exe : fatal error LNK1120: 1 个无法解析的外部命令 [C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\cmTC_a5ab0.vcxproj]
+
+
+
+Determining if the function sigaction exists failed with the following output:
+Change Dir: C:/FlowSource/code/FlowLab/RayFlow/ext/glog/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_1fdb5.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && 用于 .NET Framework 的 Microsoft (R) 生成引擎版本 16.11.2+f32259642
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+  用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.29.30147 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  CheckFunctionExists.cxx
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=sigaction /D "CMAKE_INTDIR=\"Debug\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_1fdb5.dir\Debug\\" /Fd"cmTC_1fdb5.dir\Debug\vc142.pdb" /external:W1 /Gd /TP /errorReport:queue C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CheckFunctionExists\CheckFunctionExists.cxx
+CheckFunctionExists.obj : error LNK2019: 无法解析的外部符号 sigaction，函数 main 中引用了该符号 [C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\cmTC_1fdb5.vcxproj]
+C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\Debug\cmTC_1fdb5.exe : fatal error LNK1120: 1 个无法解析的外部命令 [C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\cmTC_1fdb5.vcxproj]
+
+
+
+Determining if the function sigaltstack exists failed with the following output:
+Change Dir: C:/FlowSource/code/FlowLab/RayFlow/ext/glog/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_c6039.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && 用于 .NET Framework 的 Microsoft (R) 生成引擎版本 16.11.2+f32259642
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+  用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.29.30147 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  CheckFunctionExists.cxx
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=sigaltstack /D "CMAKE_INTDIR=\"Debug\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_c6039.dir\Debug\\" /Fd"cmTC_c6039.dir\Debug\vc142.pdb" /external:W1 /Gd /TP /errorReport:queue C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CheckFunctionExists\CheckFunctionExists.cxx
+CheckFunctionExists.obj : error LNK2019: 无法解析的外部符号 sigaltstack，函数 main 中引用了该符号 [C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\cmTC_c6039.vcxproj]
+C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\Debug\cmTC_c6039.exe : fatal error LNK1120: 1 个无法解析的外部命令 [C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\cmTC_c6039.vcxproj]
+
+
+
+Performing C++ SOURCE FILE Test HAVE_NO_DEPRECATED failed with the following output:
+Change Dir: C:/FlowSource/code/FlowLab/RayFlow/ext/glog/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_64a77.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && 用于 .NET Framework 的 Microsoft (R) 生成引擎版本 16.11.2+f32259642
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+  用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.29.30147 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D HAVE_NO_DEPRECATED /D "CMAKE_INTDIR=\"Debug\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_64a77.dir\Debug\\" /Fd"cmTC_64a77.dir\Debug\vc142.pdb" /external:W1 /Gd /TP /errorReport:queue  -Wdeprecated C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\src.cxx
+cl : 命令行 error D8021: 无效的数值参数“/Wdeprecated” [C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\cmTC_64a77.vcxproj]
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test HAVE_NO_UNNAMED_TYPE_TEMPLATE_ARGS failed with the following output:
+Change Dir: C:/FlowSource/code/FlowLab/RayFlow/ext/glog/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_2a0bd.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && 用于 .NET Framework 的 Microsoft (R) 生成引擎版本 16.11.2+f32259642
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+  用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.29.30147 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D HAVE_NO_UNNAMED_TYPE_TEMPLATE_ARGS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_2a0bd.dir\Debug\\" /Fd"cmTC_2a0bd.dir\Debug\vc142.pdb" /external:W1 /Gd /TP /errorReport:queue  -Wunnamed-type-template-args C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\src.cxx
+cl : 命令行 error D8021: 无效的数值参数“/Wunnamed-type-template-args” [C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\cmTC_2a0bd.vcxproj]
+
+
+Source file was:
+int main() { return 0; }
+Determining if the pthread_threadid_np exist failed with the following output:
+Change Dir: C:/FlowSource/code/FlowLab/RayFlow/ext/glog/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_4ba47.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && 用于 .NET Framework 的 Microsoft (R) 生成引擎版本 16.11.2+f32259642
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+  用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.29.30147 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  CheckSymbolExists.cxx
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_4ba47.dir\Debug\\" /Fd"cmTC_4ba47.dir\Debug\vc142.pdb" /external:W1 /Gd /TP /errorReport:queue C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\CheckSymbolExists.cxx
+C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\CheckSymbolExists.cxx(2,10): fatal error C1083: 无法打开包括文件: “pthread.h”: No such file or directory [C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\cmTC_4ba47.vcxproj]
+
+
+File C:/FlowSource/code/FlowLab/RayFlow/ext/glog/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_threadid_np
+  return ((int*)(&pthread_threadid_np))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Performing C++ SOURCE FILE Test HAVE___ATTRIBUTE__ failed with the following output:
+Change Dir: C:/FlowSource/code/FlowLab/RayFlow/ext/glog/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_a7e24.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && 用于 .NET Framework 的 Microsoft (R) 生成引擎版本 16.11.2+f32259642
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+  用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.29.30147 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  src.cxx
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D HAVE___ATTRIBUTE__ /D "CMAKE_INTDIR=\"Debug\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_a7e24.dir\Debug\\" /Fd"cmTC_a7e24.dir\Debug\vc142.pdb" /external:W1 /Gd /TP /errorReport:queue C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\src.cxx
+C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\src.cxx(3,23): error C3646: “__attribute__”: 未知重写说明符 [C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\cmTC_a7e24.vcxproj]
+C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\src.cxx(3,37): error C2059: 语法错误:“(” [C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\cmTC_a7e24.vcxproj]
+C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\src.cxx(3,47): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int [C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\cmTC_a7e24.vcxproj]
+
+
+Source file was:
+
+#include <cstdlib>
+static void foo(void) __attribute__ ((unused));
+int main(void) { return 0; }
+
+Performing C++ SOURCE FILE Test HAVE___ATTRIBUTE__VISIBILITY_DEFAULT failed with the following output:
+Change Dir: C:/FlowSource/code/FlowLab/RayFlow/ext/glog/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_9946c.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && 用于 .NET Framework 的 Microsoft (R) 生成引擎版本 16.11.2+f32259642
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+  用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.29.30147 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  src.cxx
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D HAVE___ATTRIBUTE__VISIBILITY_DEFAULT /D "CMAKE_INTDIR=\"Debug\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_9946c.dir\Debug\\" /Fd"cmTC_9946c.dir\Debug\vc142.pdb" /external:W1 /Gd /TP /errorReport:queue C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\src.cxx
+C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\src.cxx(3,23): error C3646: “__attribute__”: 未知重写说明符 [C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\cmTC_9946c.vcxproj]
+C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\src.cxx(3,37): error C2059: 语法错误:“(” [C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\cmTC_9946c.vcxproj]
+C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\src.cxx(3,49): error C2143: 语法错误: 缺少“)”(在“(”的前面) [C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\cmTC_9946c.vcxproj]
+C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\src.cxx(3,59): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int [C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\cmTC_9946c.vcxproj]
+C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\src.cxx(3,59): error C2440: “初始化”: 无法从“const char [8]”转换为“int” [C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\cmTC_9946c.vcxproj]
+C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\src.cxx(3,49): message : 没有使该转换得以执行的上下文 [C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\cmTC_9946c.vcxproj]
+C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\src.cxx(3,60): error C2059: 语法错误:“)” [C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\cmTC_9946c.vcxproj]
+C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\src.cxx(3,61): error C2059: 语法错误:“)” [C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\cmTC_9946c.vcxproj]
+
+
+Source file was:
+
+#include <cstdlib>
+static void foo(void) __attribute__ ((visibility("default")));
+int main(void) { return 0; }
+
+Performing C++ SOURCE FILE Test HAVE___ATTRIBUTE__VISIBILITY_HIDDEN failed with the following output:
+Change Dir: C:/FlowSource/code/FlowLab/RayFlow/ext/glog/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_c7e27.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && 用于 .NET Framework 的 Microsoft (R) 生成引擎版本 16.11.2+f32259642
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+  用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.29.30147 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  src.cxx
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D HAVE___ATTRIBUTE__VISIBILITY_HIDDEN /D "CMAKE_INTDIR=\"Debug\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_c7e27.dir\Debug\\" /Fd"cmTC_c7e27.dir\Debug\vc142.pdb" /external:W1 /Gd /TP /errorReport:queue C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\src.cxx
+C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\src.cxx(3,23): error C3646: “__attribute__”: 未知重写说明符 [C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\cmTC_c7e27.vcxproj]
+C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\src.cxx(3,37): error C2059: 语法错误:“(” [C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\cmTC_c7e27.vcxproj]
+C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\src.cxx(3,49): error C2143: 语法错误: 缺少“)”(在“(”的前面) [C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\cmTC_c7e27.vcxproj]
+C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\src.cxx(3,58): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int [C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\cmTC_c7e27.vcxproj]
+C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\src.cxx(3,58): error C2440: “初始化”: 无法从“const char [7]”转换为“int” [C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\cmTC_c7e27.vcxproj]
+C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\src.cxx(3,49): message : 没有使该转换得以执行的上下文 [C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\cmTC_c7e27.vcxproj]
+C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\src.cxx(3,59): error C2059: 语法错误:“)” [C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\cmTC_c7e27.vcxproj]
+C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\src.cxx(3,60): error C2059: 语法错误:“)” [C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\cmTC_c7e27.vcxproj]
+
+
+Source file was:
+
+#include <cstdlib>
+static void foo(void) __attribute__ ((visibility("hidden")));
+int main(void) { return 0; }
+
+Performing C++ SOURCE FILE Test HAVE___BUILTIN_EXPECT failed with the following output:
+Change Dir: C:/FlowSource/code/FlowLab/RayFlow/ext/glog/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_f703d.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && 用于 .NET Framework 的 Microsoft (R) 生成引擎版本 16.11.2+f32259642
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+  用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.29.30147 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  src.cxx
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D HAVE___BUILTIN_EXPECT /D "CMAKE_INTDIR=\"Debug\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_f703d.dir\Debug\\" /Fd"cmTC_f703d.dir\Debug\vc142.pdb" /external:W1 /Gd /TP /errorReport:queue C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\src.cxx
+C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\src.cxx(2,22): error C3861: “__builtin_expect”: 找不到标识符 [C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\cmTC_f703d.vcxproj]
+
+
+Source file was:
+
+int main(void) { if (__builtin_expect(0, 0)) return 1; return 0; }
+
+Performing C++ SOURCE FILE Test HAVE___SYNC_VAL_COMPARE_AND_SWAP failed with the following output:
+Change Dir: C:/FlowSource/code/FlowLab/RayFlow/ext/glog/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_6feb7.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && 用于 .NET Framework 的 Microsoft (R) 生成引擎版本 16.11.2+f32259642
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+  用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.29.30147 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  src.cxx
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D HAVE___SYNC_VAL_COMPARE_AND_SWAP /D "CMAKE_INTDIR=\"Debug\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_6feb7.dir\Debug\\" /Fd"cmTC_6feb7.dir\Debug\vc142.pdb" /external:W1 /Gd /TP /errorReport:queue C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\src.cxx
+C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\src.cxx(4,14): error C3861: “__sync_val_compare_and_swap”: 找不到标识符 [C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\cmTC_6feb7.vcxproj]
+
+
+Source file was:
+
+int main(void)
+{
+  int a; if (__sync_val_compare_and_swap(&a, 0, 1)) return 1; return 0;
+}
+
+Performing C++ SOURCE FILE Test HAVE_RWLOCK failed with the following output:
+Change Dir: C:/FlowSource/code/FlowLab/RayFlow/ext/glog/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_ff7b6.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && 用于 .NET Framework 的 Microsoft (R) 生成引擎版本 16.11.2+f32259642
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+  用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.29.30147 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  src.cxx
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D HAVE_RWLOCK /D "CMAKE_INTDIR=\"Debug\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_ff7b6.dir\Debug\\" /Fd"cmTC_ff7b6.dir\Debug\vc142.pdb" /external:W1 /Gd /TP /errorReport:queue C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\src.cxx
+C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\src.cxx(3,10): fatal error C1083: 无法打开包括文件: “pthread.h”: No such file or directory [C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\cmTC_ff7b6.vcxproj]
+
+
+Source file was:
+
+#define _XOPEN_SOURCE 500
+#include <pthread.h>
+int main(void)
+{
+  pthread_rwlock_t l;
+  pthread_rwlock_init(&l, NULL);
+  pthread_rwlock_rdlock(&l);
+  return 0;
+}
+
+Performing C++ SOURCE FILE Test STL_NO_NAMESPACE failed with the following output:
+Change Dir: C:/FlowSource/code/FlowLab/RayFlow/ext/glog/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_1723f.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && 用于 .NET Framework 的 Microsoft (R) 生成引擎版本 16.11.2+f32259642
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+  用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.29.30147 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  src.cxx
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D STL_NO_NAMESPACE /D "CMAKE_INTDIR=\"Debug\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_1723f.dir\Debug\\" /Fd"cmTC_1723f.dir\Debug\vc142.pdb" /external:W1 /Gd /TP /errorReport:queue C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\src.cxx
+C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\src.cxx(3,7): error C2143: 语法错误: 缺少“;”(在“<”的前面) [C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\cmTC_1723f.vcxproj]
+C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\src.cxx(3,7): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int [C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\cmTC_1723f.vcxproj]
+
+
+Source file was:
+
+#include <vector>
+vector<int> t; int main() { }
+
+Performing C++ SOURCE FILE Test HAVE_GCC_TLS failed with the following output:
+Change Dir: C:/FlowSource/code/FlowLab/RayFlow/ext/glog/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_ccc97.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && 用于 .NET Framework 的 Microsoft (R) 生成引擎版本 16.11.2+f32259642
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+  用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.29.30147 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  src.cxx
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D HAVE_GCC_TLS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_ccc97.dir\Debug\\" /Fd"cmTC_ccc97.dir\Debug\vc142.pdb" /external:W1 /Gd /TP /errorReport:queue C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\src.cxx
+C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\src.cxx(2,10): error C2144: 语法错误:“int”的前面应有“;” [C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\cmTC_ccc97.vcxproj]
+C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\src.cxx(2,14): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int [C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\cmTC_ccc97.vcxproj]
+
+
+Source file was:
+
+__thread int tls;
+int main() { }
+
+Performing C++ SOURCE FILE Test HAVE_LOCALTIME_R failed with the following output:
+Change Dir: C:/FlowSource/code/FlowLab/RayFlow/ext/glog/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_0cc87.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && 用于 .NET Framework 的 Microsoft (R) 生成引擎版本 16.11.2+f32259642
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+  用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.29.30147 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  src.cxx
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D HAVE_LOCALTIME_R /D "CMAKE_INTDIR=\"Debug\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_0cc87.dir\Debug\\" /Fd"cmTC_0cc87.dir\Debug\vc142.pdb" /external:W1 /Gd /TP /errorReport:queue C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\src.cxx
+C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\src.cxx(8,5): error C3861: “localtime_r”: 找不到标识符 [C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\cmTC_0cc87.vcxproj]
+
+
+Source file was:
+
+#include <cstdlib>
+#include <ctime>
+int main()
+{
+    time_t timep;
+    struct tm result;
+    localtime_r(&timep, &result);
+    return EXIT_SUCCESS;
+}
+
+Performing C++ SOURCE FILE Test COMPILER_HAS_DEPRECATED_ATTR failed with the following output:
+Change Dir: C:/FlowSource/code/FlowLab/RayFlow/ext/glog/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_83695.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && 用于 .NET Framework 的 Microsoft (R) 生成引擎版本 16.11.2+f32259642
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+  用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.29.30147 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  src.cxx
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D COMPILER_HAS_DEPRECATED_ATTR /D "CMAKE_INTDIR=\"Debug\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_83695.dir\Debug\\" /Fd"cmTC_83695.dir\Debug\vc142.pdb" /external:W1 /Gd /TP /errorReport:queue C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\src.cxx
+C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\src.cxx(1,16): error C2065: “__deprecated__”: 未声明的标识符 [C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\cmTC_83695.vcxproj]
+C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\src.cxx(1,31): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int [C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\cmTC_83695.vcxproj]
+C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\src.cxx(1,33): error C2062: 意外的类型“int” [C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\cmTC_83695.vcxproj]
+C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\src.cxx(1,48): error C2143: 语法错误: 缺少“;”(在“{”的前面) [C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\cmTC_83695.vcxproj]
+C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\src.cxx(1,48): error C2447: “{”: 缺少函数标题(是否是老式的形式表?) [C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\cmTC_83695.vcxproj]
+C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\src.cxx(2,25): error C3861: “somefunc”: 找不到标识符 [C:\FlowSource\code\FlowLab\RayFlow\ext\glog\CMakeFiles\CMakeTmp\cmTC_83695.vcxproj]
+
+
+Source file was:
+__attribute__((__deprecated__)) int somefunc() { return 0; }
+    int main() { return somefunc();}
